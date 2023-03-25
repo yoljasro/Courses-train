@@ -54,7 +54,7 @@ export default function Home() {
             boxShadow: "0px 0px 10px 0 #eee",
           }}
         >
-          <a href={"/math"} target={"_blank"}>
+          <a href={"/math"} target="_blank" rel="noreferrer">
             <CardMedia
               component="img"
               height="400"
@@ -80,8 +80,7 @@ export default function Home() {
             boxShadow: "0px 0px 10px 0 #eee",
           }}
         >
-          {" "}
-          <a href={"/biology"} target={"_blank"}>
+          <a href={"/biology"} target="_blank" rel="noreferrer">
             <CardMedia
               component="img"
               height="400"
@@ -107,8 +106,7 @@ export default function Home() {
             boxShadow: "0px 0px 10px 0 #eee",
           }}
         >
-          {" "}
-          <a href={"/fizi"} target={"_blank"}>
+          <a href={"/fizi"} target="_blank" rel="noreferrer">
             <CardMedia
               component="img"
               height="400"
