@@ -4,11 +4,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { AboutSelf } from "../components/AboutSelf";
-import styles from './Header/main.module.sass'
+import styles from "./Header/main.module.sass";
 
 import Link from "next/link";
 
-export const  Courses =() => {
+export const Courses = () => {
   const courses = [
     {
       id: 1,
@@ -71,18 +71,28 @@ export const  Courses =() => {
     <>
       <div className={styles.courses}>
         {courses.map((course) => (
-            <a target={'_blank'} href={'/biology'}>
-          <div className={styles.courses__card} key={course.id}>
-            <img src={course.image} className={styles.courses__img} alt={course.title} />
-            <div className="info">
-              <h3 className={styles.courses__title}>{course.title}</h3>
-              <p className={styles.courses__description}>{course.description}</p>
+          <a
+            key={course.id}
+            target={"_blank"}
+            rel="noreferrer"
+            href={"/biology"}
+          >
+            <div className={styles.courses__card}>
+              <img
+                src={course.image}
+                className={styles.courses__img}
+                alt={course.title}
+              />
+              <div className="info">
+                <h3 className={styles.courses__title}>{course.title}</h3>
+                <p className={styles.courses__description}>
+                  {course.description}
+                </p>
+              </div>
             </div>
-          </div>
           </a>
         ))}
       </div>
-
     </>
   );
-}
+};
