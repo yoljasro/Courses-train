@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/router';
+import styles from './Header/index.module.sass'
 
 export const Header = () => {
     const [isToken, setIsToken] = useState(false);
@@ -47,6 +48,12 @@ export const Header = () => {
                             </>
                         }
                     </Box>
+                    <select className={styles.select}>
+                        <option value="ru">ru</option>
+                        <option value="uz">uz</option>
+                        <option value="en">en</option>
+                        <option value="kr">kr</option>
+                    </select>
                     <Box 
                         sx={{
                             width: '100%',
