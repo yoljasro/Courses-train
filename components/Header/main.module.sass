@@ -7,11 +7,15 @@
     align-items: center
     margin-top: 50px
     margin-bottom: 50px
-    gap: 10px
+    gap: 20px
+    @media (max-width:769px)
+        gap: 10px
+        justify-content: space-between
+        // padding: 0px 1px
 
     &__card
         width: 100%
-        max-width: 600px
+        max-width: 300px
         border: 1px solid blue
         justify-content: center
         background: aqua
@@ -19,12 +23,21 @@
         flex-direction: column
         height: 100vh
         max-height: 400px
+        overflow: hidden
+        @media (max-width:769px)
+            max-width: 200px
+            max-height: 340px
+        @media (max-width:360px)
+            max-width: 170px
 
     &__img
         width: 80%
         height: 200px
-        margin: auto
+        margin: 0px auto
         border-radius: 10px
+        @media (max-width:769px)
+            height: 150px
+            width: 100%
 
     &__title
         text-align: center
@@ -33,3 +46,4 @@
     &__description
         text-align: center
         color: blue
+        padding: 5px

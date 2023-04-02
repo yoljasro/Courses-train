@@ -29,28 +29,28 @@ export const Courses = () => {
       image: "/img/kimyo.jpg",
       title: "Kimyo",
       description:
-        "Kimyo, asosan molekulyar tuzilma va kimyoviy aloqalar bilan bogliq fan. Bu, kimyoviy hodisalar, kimyoviy komponentlar, ularning tuzilishi va xossalari, ularning rivojlanishi, tahlil qilinishi va shu bilan bogliq.",
+        "Kimyo, asosan molekulyar tuzilma va kimyoviy aloqalar , formulalar , moddalar bilan bogliq fan. .",
     },
     {
       id: 4,
       image: "/img/ona.jpg",
       title: "Ona-tili",
       description:
-        "Ona tili, ozbek tili haqida tushunchalar, uslublar va uning tarixiy rivojlanishi, ona tili tuzilishi, fonetik va grammatik xossalari va boshqalar haqida ilmni organadi.",
+        "Ona tili, ozbek tili haqida tushunchalar, uslublar va uning tarixiy rivojlanishi, haqida ilmni organadi.",
     },
     {
       id: 5,
       image: "/img/adabiyot.jpg",
       title: "Adabiyot",
       description:
-        "Adabiyot, ilmiy, estetik va sotsial huquqni yodgorlik bilan birlashtiradigan odamlarning axloqiy tuygulari, fikrlari, sanati, tabiiyat manzaralari va boshqa muhitni tavsifi, nutq, nashriyot va boshqa sanatlar uslublariga asoslangan shaxsiylik va shaxsiylikka xos maxsulotlarni qamrab olish va tahlil qilish bilan bogliq fan.",
+        "Adabiyot, ilmiy, estetik va sotsial huquqni yodgorlik bilan birlashtiradigan odamlarning axloqiy tuygulari haqidagi fan.",
     },
     {
       id: 6,
       image: "/img/rus.jpg",
       title: "Rus-tili",
       description:
-        "Rus tili, rus tilining tuzilishi, fonetik va grammatik xossalari, uslublari, soz sanati, lugat, tarixi va boshqalar haqida ilmni organadi.",
+        "Rus tili, rus tilining tuzilishi, fonetik va grammatik xossalari, uslublari va boshqalar haqida ilmni organadi.",
     },
     {
       id: 7,
@@ -64,7 +64,7 @@ export const Courses = () => {
       image: "/img/english.jpg",
       title: "Ingliz-tili",
       description:
-        "Ingliz tili, ingliz tili fonetikasi va grammatikasi, yozish va gapirish uslublari, nutq sanati, tarixi va boshqalar haqida ilmni organadi.",
+        "Ingliz tili, ingliz tili fonetikasi va grammatikasi va gapirish uslublari tarixi va boshqalar haqida ilmni organadi.",
     },
   ];
   return (
