@@ -59,11 +59,11 @@ export const Header = () => {
                             width: '100%',
                             maxWidth: 250,
                             display: 'flex',
-                            justifyContent: 'space-around'
+                            justifyContent: 'space-around',
                         }}
                     >
-                        <Button variant='contained' color={'info'} onClick={() => router.push('/sign-up')}>Sign Up</Button>
-                        <Button variant = 'contained'  color={"secondary"} onClick={() => router.push('/sign-in')}>Sign in</Button>
+                        <Button className={styles.btn} variant='contained' color={'info'} onClick={() => router.push('/sign-up')}>Sign Up</Button>
+                        <Button className={styles.btn} variant = 'contained'  color={"secondary"} onClick={() => router.push('/sign-in')}>Sign in</Button>
                     </Box>
                 </Toolbar>
             </AppBar>
