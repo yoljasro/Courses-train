@@ -13,58 +13,42 @@ export const Courses = () => {
     {
       id: 1,
       image: "/img/bio.webp",
-      title: "Biologiya",
-      description:
-        "Biologiya, hayvonlar va bitkilarning hayoti, tuzilmasi, rivojlanishi va ozaro aloqalari haqida ilmni organadi.",
+      href : "/biology"
     },
     {
       id: 2,
       image: "/img/math.jpg",
-      title: "Matematika",
-      description:
-        "Matematika, raqamli algoritmlarni va modellarini yaratish, tahlil qilish va ilgari korish bilan bogliq fan.",
+      href : "/math"
     },
     {
       id: 3,
       image: "/img/kimyo.jpg",
-      title: "Kimyo",
-      description:
-        "Kimyo, asosan molekulyar tuzilma va kimyoviy aloqalar , formulalar , moddalar bilan bogliq fan. .",
+      href : "/kimyo"
     },
     {
       id: 4,
       image: "/img/ona.jpg",
-      title: "Ona-tili",
-      description:
-        "Ona tili, ozbek tili haqida tushunchalar, uslublar va uning tarixiy rivojlanishi, haqida ilmni organadi.",
+      href : "/mother"
     },
     {
       id: 5,
       image: "/img/adabiyot.jpg",
-      title: "Adabiyot",
-      description:
-        "Adabiyot, ilmiy, estetik va sotsial huquqni yodgorlik bilan birlashtiradigan odamlarning axloqiy tuygulari haqidagi fan.",
+      href : "/literature"
     },
     {
       id: 6,
       image: "/img/rus.jpg",
-      title: "Rus-tili",
-      description:
-        "Rus tili, rus tilining tuzilishi, fonetik va grammatik xossalari, uslublari va boshqalar haqida ilmni organadi.",
+      href : "/russian"
     },
     {
       id: 7,
       image: "/img/fizi.jfif",
-      title: "Fizika",
-      description:
-        "Fizika, tabiiy obektlarning xossalari va ularning ozaro aloqalarini organish, nazariy va amaliy fan.",
+      href : "/fizi"
     },
     {
       id: 8,
       image: "/img/english.jpg",
-      title: "Ingliz-tili",
-      description:
-        "Ingliz tili, ingliz tili fonetikasi va grammatikasi va gapirish uslublari tarixi va boshqalar haqida ilmni organadi.",
+      href : "/english"
     },
   ];
   return (
@@ -75,7 +59,7 @@ export const Courses = () => {
             key={course.id}
             target={"_blank"}
             rel="noreferrer"
-            href={"/biology"}
+            href={course.href}
           >
             <div className={styles.courses__card}>
               <img
@@ -83,13 +67,7 @@ export const Courses = () => {
                 className={styles.courses__img}
                 alt={course.title}
               />
-              <div className="info">
-                <h3 className={styles.courses__title}>{course.title}</h3>
-                <p className={styles.courses__description}>
-                  {course.description}
-                </p>
-              </div>
-            </div>
+              </div>  
           </a>
         ))}
       </div>

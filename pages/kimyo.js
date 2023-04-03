@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Box, Typography , Button } from '@mui/material';
 
-const Math = () => {
+const Fizi = () => {
   return (
     <div>
       <Box
@@ -17,23 +17,23 @@ const Math = () => {
         }}
       >
         <Typography variant='h4' component='h1' sx={{ mb: 4 }}>
-          Matematika   haqida
+          Kimyo    haqida
         </Typography>
         <Typography variant='body1' sx={{ mb: 4 }}>
-          Bu yerda Matematika haqida malumotlarni topishingiz mumkin. Bu yerda
-          turlar boyicha Matematika haqida malumotlar, asosiy konseptlar,
+          Bu yerda Kimyo haqida malumotlarni topishingiz mumkin. Bu yerda
+          turlar boyicha biologiya haqida malumotlar, asosiy konseptlar,
           xususiyatlar, tushunchalar, organish usullari va turli xil boshqa
           malumotlarga ega bolishingiz mumkin.
         </Typography>
         <Typography variant='body1' sx={{ mb: 4 }}>
-          Bizning Matematika kursimiz, oquvchilarga matematik va fikr yoshlariga
+          Bizning Kimyo kursimiz, oquvchilarga jismoniy va fikr yoshlariga
           yonaltirilgan, hamda ularni organish va rivojlantirishga yordam
-          beradi. Bu kursda siz Matematika fanining asosiy tushunchalarini
-          organasiz, jismoniy tizimlarni, ornatish, funktsiyalarni, formulalari
+          beradi. Bu kursda siz biologiya fanining asosiy tushunchalarini
+          organasiz, jismoniy tizimlarni, ornatish, funktsiyalarni, genetikani
           va ekologiyani tahlil qilasiz.
         </Typography>
         <Typography variant='body1' sx={{ mb: 4 }}>
-          Agar siz Matematika haqida koproq bilim olmoqchi bolsangiz, bizning
+          Agar siz Kimyo haqida koproq bilim olmoqchi bolsangiz, bizning
           kursimiz siz uchun juda qiziqarli boladi. Kursga yozilish uchun
           quyidagi tugmani bosing.
         </Typography>
@@ -45,4 +45,4 @@ const Math = () => {
   );
 };
 
-export default Math;
+export default Fizi;

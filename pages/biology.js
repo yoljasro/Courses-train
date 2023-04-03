@@ -6,7 +6,6 @@ import { Box, Typography , Button } from '@mui/material';
 const Biology = () => {
   return (
     <div>
-      <Header />
       <Box
         sx={{
           maxWidth: '1200px',
@@ -42,7 +41,6 @@ const Biology = () => {
           Kursga yozilish
         </Button>
       </Box>
-      <Footer />
     </div>
   );
 };

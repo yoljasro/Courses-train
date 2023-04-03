@@ -27,7 +27,7 @@ export const Footer = () => {
       <AppBar
         position="static"
         sx={{
-          height: 120,
+          height: 150,
           background: "#5A46D4",
         }}
       >

@@ -6,7 +6,6 @@ import { Box, Typography , Button } from '@mui/material';
 const Fizi = () => {
   return (
     <div>
-      <Header />
       <Box
         sx={{
           maxWidth: '1200px',
@@ -18,23 +17,23 @@ const Fizi = () => {
         }}
       >
         <Typography variant='h4' component='h1' sx={{ mb: 4 }}>
-          Fizi   haqida
+          Fizika   haqida
         </Typography>
         <Typography variant='body1' sx={{ mb: 4 }}>
-          Bu yerda biologiya haqida malumotlarni topishingiz mumkin. Bu yerda
-          turlar boyicha biologiya haqida malumotlar, asosiy konseptlar,
+          Bu yerda Fizika haqida malumotlarni topishingiz mumkin. Bu yerda
+          turlar boyicha Fizika haqida malumotlar, asosiy konseptlar,
           xususiyatlar, tushunchalar, organish usullari va turli xil boshqa
           malumotlarga ega bolishingiz mumkin.
         </Typography>
         <Typography variant='body1' sx={{ mb: 4 }}>
-          Bizning biologiya kursimiz, oquvchilarga jismoniy va fikr yoshlariga
+          Bizning Fizika kursimiz, oquvchilarga jismoniy va fikr yoshlariga
           yonaltirilgan, hamda ularni organish va rivojlantirishga yordam
-          beradi. Bu kursda siz biologiya fanining asosiy tushunchalarini
+          beradi. Bu kursda siz Fizika fanining asosiy tushunchalarini
           organasiz, jismoniy tizimlarni, ornatish, funktsiyalarni, genetikani
           va ekologiyani tahlil qilasiz.
         </Typography>
         <Typography variant='body1' sx={{ mb: 4 }}>
-          Agar siz biologiya haqida koproq bilim olmoqchi bolsangiz, bizning
+          Agar siz Fizika haqida koproq bilim olmoqchi bolsangiz, bizning
           kursimiz siz uchun juda qiziqarli boladi. Kursga yozilish uchun
           quyidagi tugmani bosing.
         </Typography>
@@ -42,7 +41,6 @@ const Fizi = () => {
           Kursga yozilish
         </Button>
       </Box>
-      <Footer />
     </div>
   );
 };
