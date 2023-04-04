@@ -1,9 +1,9 @@
-import { Authorizen } from "../components/Authorizen";
+import { Request } from "../components/Request";
 
 const SignIn = () => {
     return (
         <>
-            <Authorizen isSignUp={false}/>
+            <Request/>
         </>
     )
 };
