@@ -22,6 +22,7 @@ export const Footer = () => {
     <Box
       sx={{
         flexGrow: 1,
+        paddinTop: "100px"
       }}
     >
       <AppBar
@@ -29,6 +30,8 @@ export const Footer = () => {
         sx={{
           height: 150,
           background: "#5A46D4",
+          marginTop: "50px" , 
+          // position: "fixed"
         }}
       >
         <Box

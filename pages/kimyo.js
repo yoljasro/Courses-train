@@ -1,43 +1,53 @@
-import React from 'react';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { Box, Typography , Button } from '@mui/material';
+import React, { useEffect, useState } from "react";
+import { Box, Typography, Button } from "@mui/material";
+import axios from "axios";
 
-const Fizi = () => {
+const Math = () => {
+  const [kimyo, setKimyo] = useState("");
+  const url = "https://api.smartshopcenter.org/kimyo";
+
+  useEffect(() => {
+    axios
+      .get(url, kimyo)
+      .then(function (response) {
+        setKimyo(response.data.kimyo);
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
+  });
+
   return (
     <div>
       <Box
         sx={{
-          maxWidth: '1200px',
-          width: '100%',
-          margin: '30px auto',
-          padding: '20px',
-          boxShadow: '0px 0px 10px 0 #eee',
-          borderRadius: '20px',
+          maxWidth: "1200px",
+          width: "100%",
+          margin: "30px auto",
+          padding: "20px",
+          boxShadow: "0px 0px 10px 0 #eee",
+          borderRadius: "20 px",
         }}
       >
-        <Typography variant='h4' component='h1' sx={{ mb: 4 }}>
-          Kimyo    haqida
-        </Typography>
-        <Typography variant='body1' sx={{ mb: 4 }}>
-          Bu yerda Kimyo haqida malumotlarni topishingiz mumkin. Bu yerda
-          turlar boyicha biologiya haqida malumotlar, asosiy konseptlar,
-          xususiyatlar, tushunchalar, organish usullari va turli xil boshqa
-          malumotlarga ega bolishingiz mumkin.
-        </Typography>
-        <Typography variant='body1' sx={{ mb: 4 }}>
-          Bizning Kimyo kursimiz, oquvchilarga jismoniy va fikr yoshlariga
-          yonaltirilgan, hamda ularni organish va rivojlantirishga yordam
-          beradi. Bu kursda siz biologiya fanining asosiy tushunchalarini
-          organasiz, jismoniy tizimlarni, ornatish, funktsiyalarni, genetikani
-          va ekologiyani tahlil qilasiz.
-        </Typography>
-        <Typography variant='body1' sx={{ mb: 4 }}>
-          Agar siz Kimyo haqida koproq bilim olmoqchi bolsangiz, bizning
+        {kimyo &&
+          kimyo.length > 0 &&
+          kimyo.map((kimyo) => {
+            return (
+              <div>
+                <Typography variant="h4" component="h1" sx={{ mb: 4 }}>
+                  {kimyo.title}
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 4 }}>
+                  {kimyo.description}
+                </Typography>
+              </div>
+            );
+          })}
+        <Typography variant="body1" sx={{ mb: 4 }}>
+          Agar siz Kimyo  haqida koproq bilim olmoqchi bolsangiz, bizning
           kursimiz siz uchun juda qiziqarli boladi. Kursga yozilish uchun
           quyidagi tugmani bosing.
         </Typography>
-        <Button variant='contained' color='primary'>
+        <Button variant="contained" color="primary">
           Kursga yozilish
         </Button>
       </Box>
@@ -45,4 +55,4 @@ const Fizi = () => {
   );
 };
 
-export default Fizi;
+export default Math;

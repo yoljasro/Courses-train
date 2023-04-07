@@ -12,7 +12,7 @@ export const Courses = () => {
   const courses = [
     {
       id: 1,
-      image: "/img/bio.webp",
+      image: "/img/biology.webp",
       href : "/biology"
     },
     {
@@ -27,7 +27,7 @@ export const Courses = () => {
     },
     {
       id: 4,
-      image: "/img/ona.jpg",
+      image: "/img/mothertongue.jpg",
       href : "/mother"
     },
     {
