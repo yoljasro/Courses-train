@@ -34,7 +34,7 @@ const Math = () => {
           english.length > 0 &&
           english.map((english) => {
             return (
-              <div>
+              <div key={english.id}>
                 <Typography variant="h4" component="h1" sx={{ mb: 4 }}>
                   {english.title}
                 </Typography>

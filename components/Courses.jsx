@@ -24,8 +24,8 @@ export const Courses = () => {
         {
           courses.map((course) =>{
             return(
-              <Link href={"/english"}>
-              <div className={styles.courses__cont} key={course.id}>
+              <Link href={"/english"} key={course.id}>
+              <div className={styles.courses__cont}>
                 <div className={styles.courses__img}>{course.image}</div>
               </div>
               </Link>
