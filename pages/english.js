@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const Math = () => {
+  const router = useRouter();
   const [english, setEnglish] = useState("");
-  const url = "https://api.smartshopcenter.org/english";
+  const url = "http://smartshopcenter.org:5000/english";
 
   useEffect(() => {
     axios
@@ -12,7 +14,7 @@ const Math = () => {
       .then(function (response) {
         setEnglish(response.data.english);
         console.log(response);
-      })
+      }, [])
       .catch((err) => console.log(err));
   });
 
@@ -43,11 +45,15 @@ const Math = () => {
             );
           })}
         <Typography variant="body1" sx={{ mb: 4 }}>
-          Agar siz Ingliz  haqida koproq bilim olmoqchi bolsangiz, bizning
+          Agar siz Ingliz haqida koproq bilim olmoqchi bolsangiz, bizning
           kursimiz siz uchun juda qiziqarli boladi. Kursga yozilish uchun
           quyidagi tugmani bosing.
         </Typography>
-        <Button variant="contained" color="primary">
+        <Button
+          onClick={() => router.push("/sign-up")}
+          variant="contained"
+          color="primary"
+        >
           Kursga yozilish
         </Button>
       </Box>

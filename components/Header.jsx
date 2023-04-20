@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { useRouter } from "next/router";
 import styles from "./Header/index.module.sass";
+import Head from "next/head";
 
 export const Header = () => {
   const [isToken, setIsToken] = useState(false);
@@ -15,6 +16,7 @@ export const Header = () => {
       setIsToken(true);
     }
   }, []);
+ 
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -66,12 +68,12 @@ export const Header = () => {
               justifyContent: "space-around",
             }}
           >
-            <select className={styles.select}>
+            {/* <select className={styles.select}>
               <option value="ru">ru</option>
               <option value="uz">uz</option>
               <option value="en">en</option>
               <option value="kr">kr</option>
-            </select>
+            </select> */}
             <Button
               className={styles.btn}
               variant="contained"

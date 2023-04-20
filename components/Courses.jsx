@@ -5,71 +5,33 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { AboutSelf } from "../components/AboutSelf";
 import styles from "./Header/main.module.sass";
-
 import Link from "next/link";
+import { useState  , useEffect } from "react";
+import axios from "axios";
 
 export const Courses = () => {
-  const courses = [
-    {
-      id: 1,
-      image: "/img/biology.webp",
-      href : "/biology"
-    },
-    {
-      id: 2,
-      image: "/img/math.jpg",
-      href : "/math"
-    },
-    {
-      id: 3,
-      image: "/img/kimyo.jpg",
-      href : "/kimyo"
-    },
-    {
-      id: 4,
-      image: "/img/mothertongue.jpg",
-      href : "/mother"
-    },
-    {
-      id: 5,
-      image: "/img/adabiyot.jpg",
-      href : "/literature"
-    },
-    {
-      id: 6,
-      image: "/img/rus.jpg",
-      href : "/russian"
-    },
-    {
-      id: 7,
-      image: "/img/fizi.jfif",
-      href : "/fizi"
-    },
-    {
-      id: 8,
-      image: "/img/english.jpg",
-      href : "/english"
-    },
-  ];
+  const [courses, setCourses] = useState([]);
+  const url = "http://smartshopcenter.org:5000/courses";  
+  useEffect(() => {
+    axios.get(url).then(function (response) {
+      setCourses(response.data.course);
+      // console.log(response.data)
+    });
+  }  , []);
   return (
     <>
       <div className={styles.courses}>
-        {courses.map((course) => (
-          <a
-            key={course.id}
-            target={"_blank"}
-            rel="noreferrer"
-            href={course.href}
-          >
-            <div className={styles.courses__card}>
-              <img
-                src={course.image}
-                className={styles.courses__img}
-                alt={course.title}
-              />
-              </div>  
-          </a>
-        ))}
+        {
+          courses.map((course) =>{
+            return(
+              <Link href={"/english"}>
+              <div className={styles.courses__cont} key={course.id}>
+                <div className={styles.courses__img}>{course.image}</div>
+              </div>
+              </Link>
+            )
+          })
+        }
       </div>
     </>
   );

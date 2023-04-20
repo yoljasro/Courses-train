@@ -33,16 +33,16 @@ export const Request = () => {
 
     try {
       const res = await axios.post(
-        "https://api.smartshopcenter.org/pupils",
+        "http://smartshopcenter.org:5000/pupils",
         body,
         config
       );
       console.log(res.data);
       alert("Submited in Database")
+      router.push("/")
     } catch (err) {
       console.error(err.response.data);
       alert("Error") 
-      router.push('/')
     }
   };
 

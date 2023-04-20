@@ -26,18 +26,19 @@ export const Footer = () => {
       }}
     >
       <AppBar
-        position="static"
+        position="relative"
         sx={{
           height: 150,
           background: "#5A46D4",
-          marginTop: "50px" , 
+          // top: "50px" , 
+          marginTop: "100px" , 
           // position: "fixed"
-        }}
+        }} 
       >
         <Box
           sx={{
             width: "100%",
-            maxWidth: "100%",
+            maxWidth: "100%" ,
             display: "flex",
             justifyContent: "space-around",
             marginLeft: "auto",
