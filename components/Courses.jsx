@@ -15,7 +15,7 @@ export const Courses = () => {
   useEffect(() => {
     axios.get(url).then(function (response) {
       setCourses(response.data.course);
-      // console.log(response.data)
+      console.log(response.data)
     });
   }  , []);
   return (
